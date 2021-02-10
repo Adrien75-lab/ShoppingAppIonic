@@ -30,4 +30,12 @@ export class AppComponent {
       this.navCtrl.navigateRoot('/home');
     });
   }
+  showCategory(catTitle:string):void {
+    this.navCtrl.navigateForward('/category/'+catTitle);
+    console.log('catTitle',catTitle);
+  }
+   goTo(route: string) : void {
+    console.log('route', route);
+    this.navCtrl.navigateForward(`/${route}`);
+  }
 }

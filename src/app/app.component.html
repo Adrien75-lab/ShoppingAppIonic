@@ -10,12 +10,11 @@
       <ion-item-divider color="primary" >Categories</ion-item-divider>
       
       <ion-list>
-        <ion-item *ngFor="let cat of categories"  >
+        <ion-item button (click)="showCategory(cat.title)" *ngFor="let cat of categories"  >
           <ion-icon [name]="cat.icon" slot="start"></ion-icon>
           <div class="my-container-label">
               <ion-label class="my-label-title">{{cat.title}}</ion-label>
               <ion-label color="medium">{{cat.description}}</ion-label>
-
           </div>
           
         </ion-item>
